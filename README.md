@@ -10,6 +10,8 @@ On detail screen, tap a chapter → Chapter Reader (page images)
 🌐 API Flow (what the app does behind the scenes)
 Below is the sequence used by the app’s MangaDexService (in mangadex_service.dart):
 
+
+
 Fetch featured manga → GET /manga?limit=20&includes[]=cover_art&availableTranslatedLanguage[]=en
 Search manga → GET /manga?title=<query>&limit=20&includes[]=cover_art&availableTranslatedLanguage[]=en
 Fetch manga details → GET /manga/<mangaId>?includes[]=cover_art
@@ -21,7 +23,11 @@ Fetch chapter pages → GET /at-home/server/<chapterId>
 2) Add the HTTP package (for REST calls)
 In pubspec.yaml:
 
+
+
 Then run:
+
+
 
 3) Define JSON models (parse API responses)
 ✅ In this repo:
@@ -41,6 +47,9 @@ Mapping to model objects
 Throwing exceptions for non-200 responses
 5) Connect UI screens to the service
 ✅ In this repo:
+
+
+
 
 dashboard_screen.dart calls:
 service.fetchFeaturedManga()
